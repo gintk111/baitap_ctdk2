@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bài 11</title>
+</head>
+<body>
+    <script>
+        let luong = parseInt(prompt("Nhập lương:"));
+        if (luong < 0 || luong < 1000000){
+            alert("Vui lòng nhập lại")
+        }else if (luong < 10000000){
+            alert("Thuế thu nhập cá nhân là: " + luong * 5 / 100 + "VNĐ");
+        }else {
+            alert("Thuế thu nhập cá nhân là: " + luong * 10 / 100 + "VNĐ");
+        }
+    </script>
+</body>
+</html>

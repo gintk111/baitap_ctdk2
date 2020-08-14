@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bài 7</title>
+</head>
+<body>
+<script>
+    let a = parseInt(prompt("Nhập số a"));
+    let b = parseInt(prompt("Nhập số b"));
+    let c = parseInt(prompt("Nhập số c"));
+    if (a == 0){
+        if (b == 0 && c != 0){
+            alert("Phương trình vô nghiệm");
+        }
+        else if (b == 0 && c == 0){
+            alert("Phương trình vô số nghiệm");
+        }
+        else if (b != 0 && c == 0){
+            alert("Phương trình có nghiệm : x = 0");
+        }
+        else {
+            let x = c / b;
+            alert("x = " + x)
+        }
+    }else{
+        let delta = b*b - 4*a*c;
+        if (delta == 0){
+            let x1 = -b / (2*a);
+            alert("Phương trình có nghiệm kép: " + "x=" + x1);
+        }
+        else if (delta < 0){
+            alert("Phương trình vô nghiệm");
+        }
+        else {
+            let x2 = (-b + Math.sqrt(delta))/(2*a);
+            let x3= (-b - Math.sqrt(delta))/(2*a);
+            alert("Phương trình có 2 nghiệm: x1 =" + x2 + "và x2 =" + x3);
+        }
+    }
+</script>
+</body>
+</html>
